@@ -15,10 +15,13 @@ Portfolio personal de <strong>Francisco Javier Martínez Fernández</strong>, es
 Este proyecto es una web personal de estilo portfolio con:
 
 - Hero principal con llamada a la acción.
+- Foto de perfil y enlaces sociales.
 - Secciones de presentación, habilidades, trayectoria, proyectos y contacto.
 - Modo claro/oscuro.
+- Selector de idioma español / inglés.
 - Diseño responsive para móvil y escritorio.
 - Animaciones suaves y una interfaz más actual.
+- Formulario de contacto que abre el cliente de correo.
 
 ## Tecnologías
 
@@ -26,6 +29,7 @@ Este proyecto es una web personal de estilo portfolio con:
 - CSS3
 - JavaScript
 - React
+- Strapi
 - Lucide Icons
 - Google Fonts
 
@@ -50,6 +54,7 @@ Este proyecto es una web personal de estilo portfolio con:
 - Navegación fija con menú móvil.
 - Tarjetas con efecto glassmorphism suave.
 - Timeline de formación y experiencia.
+- Acceso rápido a GitHub y LinkedIn.
 - Bloques de contacto visuales.
 - Fondo con degradados y profundidad para una apariencia más cuidada.
 
