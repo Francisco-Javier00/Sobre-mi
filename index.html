@@ -3,295 +3,384 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Francisco Javier Martínez Fernández | Portafolio</title>
+    <title>Francisco Javier Martínez Fernández | Portfolio</title>
     <meta
       name="description"
-      content="Desarrollador Web apasionado por crear experiencias de usuario modernas y de alto impacto."
+      content="Portfolio de Francisco Javier Martínez Fernández, estudiante de DAW con enfoque en desarrollo web moderno, experiencia de usuario y soluciones digitales."
     />
+    <meta name="color-scheme" content="dark light" />
 
-    <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="page-bg"></div>
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
-    <nav>
-      <div class="container">
-        <div class="logo">Francisco.dev</div>
-        <div class="nav-links">
+    <a class="skip-link" href="#content">Saltar al contenido</a>
+
+    <header class="site-header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="brand" href="#top" aria-label="Ir al inicio">
+          <span class="brand-mark">FJ</span>
+          <span class="brand-text">
+            <strong>Francisco.dev</strong>
+            <span>Portfolio personal</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <i data-lucide="menu"></i>
+          <span>Menú</span>
+        </button>
+
+        <div class="nav-panel" id="primary-navigation">
           <a href="#about">Sobre mí</a>
           <a href="#skills">Habilidades</a>
-          <a href="#experience">Experiencia</a>
+          <a href="#experience">Trayectoria</a>
+          <a href="#projects">Proyectos</a>
           <a href="#contact">Contacto</a>
-          <button id="theme-toggle" style="background: none; border: none; color: var(--text-muted); cursor: pointer; display: flex; align-items: center;">
-              <i data-lucide="moon" id="theme-icon"></i>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Cambiar tema"
+          >
+            <i data-lucide="moon-star" id="theme-icon"></i>
           </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="container">
-          <span class="badge">Ocupado</span>
-          <h1>
-            Hola, soy <br /><span class="gradient-text"
-              >Francisco Javier Martínez Fernández</span
-            >
-          </h1>
-          <p>
-            Estudiante de Desarrollo de Aplicaciones Web (DAW) enfocado en crear
-            soluciones tecnológicas modernas, eficientes,
-          </p>
-          <div class="hero-btns">
-            <a href="#contact" class="btn">Hablemos</a>
+    <main id="content">
+      <section class="hero section" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Disponible para nuevas oportunidades</p>
+            <h1>
+              Diseño y desarrollo
+              <span class="gradient-text">con una base clara, útil y moderna</span>
+            </h1>
+            <p class="hero-lead">
+              Soy Francisco Javier Martínez Fernández, estudiante de DAW centrado
+              en crear interfaces limpias, accesibles y con una experiencia de uso
+              cuidada. Mi tecnología fuerte es React, con la que me siento más
+              cómodo construyendo interfaces modernas, y además me encanta
+              trabajar en equipo.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">
+                <i data-lucide="send"></i>
+                Hablemos
+              </a>
+              <a class="btn btn-secondary" href="#projects">
+                <i data-lucide="sparkles"></i>
+                Ver proyectos
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <article class="stat-card">
+                <span class="stat-value">React</span>
+                <span class="stat-label">Mi tecnología principal para front-end</span>
+              </article>
+              <article class="stat-card">
+                <span class="stat-value">UX</span>
+                <span class="stat-label">Interés por interfaces claras y funcionales</span>
+              </article>
+              <article class="stat-card">
+                <span class="stat-value">Team</span>
+                <span class="stat-label">Perfil colaborativo y proactivo</span>
+              </article>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <!-- About Section -->
-      <section id="about" class="reveal">
-        <div class="container">
-          <div class="grid grid-2">
-            <div class="card">
-              <h2
-                class="section-title"
-                style="text-align: left; margin-bottom: 1.5rem"
-              >
-                Sobre mí
-              </h2>
+          <aside class="hero-panel reveal">
+            <div class="profile-card">
+              <div class="profile-ring">
+                <div class="profile-avatar">FJ</div>
+              </div>
+              <p class="profile-role">Desarrollador web junior · React</p>
+              <h2>Construyo experiencias digitales con criterio visual</h2>
               <p>
-                Me considero una persona proactiva, amable y con una gran
-                capacidad de trabajo en equipo. Actualmente estoy cursando el
-                segundo ciclo de DAW en la Escuela Virgen de Guadalupe.
-              </p>
-              <p style="margin-top: 1rem">
-                Mi objetivo es integrarme en un equipo dinámico donde pueda
-                potenciar mis conocimientos y profundizar en el uso de
-                frameworks modernos para crear experiencias de usuario de alto
-                impacto.
+                Me gusta trabajar la estructura, el detalle y la coherencia para
+                que cada proyecto se sienta sólido desde el primer vistazo. Me
+                encanta colaborar con otras personas para sacar mejores ideas y
+                resultados.
               </p>
             </div>
-            <div class="grid gap-1">
-              <div class="card">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem">
-                  <i data-lucide="languages"></i> Idiomas
-                </h3>
-                <div class="tags" style="margin-top: 1rem">
-                  <span class="tag">Español (Nativo)</span>
-                  <span class="tag">Portugués (Nivel ESO)</span>
+
+            <div class="glass-card">
+              <div class="mini-heading">
+                <i data-lucide="map-pin"></i>
+                <span>Ubicación</span>
+              </div>
+              <p>Badajoz, España</p>
+            </div>
+
+            <div class="glass-card">
+              <div class="mini-heading">
+                <i data-lucide="badge-check"></i>
+                <span>Enfoque</span>
+              </div>
+              <p>Diseño limpio, código organizado y aprendizaje continuo.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Sobre mí</p>
+            <h2>Una base técnica sólida con ganas de seguir creciendo</h2>
+            <p>
+              Soy una persona proactiva, amable y orientada al trabajo en equipo.
+              Actualmente curso el segundo ciclo de DAW en la Escuela Virgen de Guadalupe.
+            </p>
+          </div>
+
+          <div class="grid grid-2 about-grid">
+              <article class="card card-accent">
+                <div class="card-topline">
+                  <i data-lucide="brain-circuit"></i>
+                  <span>Lo que busco</span>
                 </div>
-              </div>
-              <div class="card" style="margin-top: 2rem">
-                <h3 style="display: flex; align-items: center; gap: 0.5rem">
-                  <i data-lucide="car"></i> Otros
-                </h3>
-                <p style="margin-top: 1rem">Carnet de conducir (Permiso B)</p>
-              </div>
+                <p>
+                  Integrarme en un equipo dinámico donde pueda aportar, aprender
+                  y profundizar en frameworks y herramientas modernas para crear
+                  productos útiles.
+                </p>
+              </article>
+
+            <div class="grid gap-1">
+              <article class="card">
+                <div class="card-topline">
+                  <i data-lucide="languages"></i>
+                  <span>Idiomas</span>
+                </div>
+                <div class="tags">
+                  <span class="tag">Español nativo</span>
+                  <span class="tag">Portugués nivel ESO</span>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card-topline">
+                  <i data-lucide="car"></i>
+                  <span>Disponibilidad</span>
+                </div>
+                <p>Carnet de conducir tipo B.</p>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="reveal">
+      <section id="skills" class="section reveal">
         <div class="container">
-          <h2 class="section-title">Habilidades Técnicas</h2>
-          <div class="grid grid-3">
-            <div class="card">
+          <div class="section-heading">
+            <p class="eyebrow">Habilidades</p>
+            <h2>Stack técnico que me permite moverme entre front, lógica y datos</h2>
+          </div>
+
+          <div class="grid grid-3 skills-grid">
+            <article class="card skill-card">
               <div class="skill-icon"><i data-lucide="code-2"></i></div>
               <h3>Lenguajes</h3>
+              <p>Base versátil para construir lógica y resolver problemas.</p>
               <div class="tags">
                 <span class="tag">JavaScript</span>
                 <span class="tag">TypeScript</span>
                 <span class="tag">PHP</span>
                 <span class="tag">C</span>
               </div>
-            </div>
-            <div class="card">
-              <div class="skill-icon"><i data-lucide="layout"></i></div>
-              <h3>Desarrollo Web</h3>
+            </article>
+
+            <article class="card skill-card">
+              <div class="skill-icon"><i data-lucide="layout-dashboard"></i></div>
+              <h3>Desarrollo web</h3>
+              <p>Interés por interfaces limpias, responsivas y accesibles.</p>
               <div class="tags">
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS3</span>
-                <span class="tag">Angular</span>
+                <span class="tag">React</span>
                 <span class="tag">GitHub</span>
               </div>
-            </div>
-            <div class="card">
+            </article>
+
+            <article class="card skill-card">
               <div class="skill-icon"><i data-lucide="database"></i></div>
-              <h3>Bases de Datos</h3>
+              <h3>Bases de datos</h3>
+              <p>Trabajo cómodo con datos relacionales y consultas SQL.</p>
               <div class="tags">
                 <span class="tag">MySQL</span>
                 <span class="tag">SQL Server</span>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Experience Section -->
-      <section id="experience" class="reveal">
+      <section id="experience" class="section reveal">
         <div class="container">
-          <h2 class="section-title">Trayectoria</h2>
+          <div class="section-heading">
+            <p class="eyebrow">Trayectoria</p>
+            <h2>Formación y experiencia que me han dado base técnica real</h2>
+          </div>
+
           <div class="timeline">
-            <div class="timeline-item">
+            <article class="timeline-item">
               <span class="timeline-date">Actualidad</span>
               <h3>Ciclo Superior DAW</h3>
               <p>
-                Escuela Virgen de Guadalupe. Especializándome en desarrollo de
-                aplicaciones web de vanguardia.
+                Escuela Virgen de Guadalupe. Especialización en desarrollo de
+                aplicaciones web y mejora continua.
               </p>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-date">DAW - 1 Mes</span>
-              <h3>Prácticas en Fenles</h3>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-date">2026 · 4 meses</span>
+              <h3>Prácticas en FENLES</h3>
               <p>
-                Experiencia inicial en el sector de desarrollo durante el ciclo
-                de DAW.
+                Estuve trabajando con sus tecnologías y trasladando su web,
+                adaptándola al nuevo entorno y apoyando la puesta al día del
+                proyecto.
               </p>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-date">SMR - 3 Meses</span>
-              <h3>Prácticas Grupo DOSCAR</h3>
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-date">DAW · 1 mes</span>
+              <h3>Prácticas en FENLES</h3>
               <p>
-                Instalación de TPV en locales y reparación de equipos
-                informáticos.
+                Primeras prácticas en la empresa, con contacto directo con el
+                entorno profesional y participación en tareas del proyecto web.
               </p>
-            </div>
-            <div class="timeline-item">
+            </article>
+
+            <article class="timeline-item">
+              <span class="timeline-date">SMR · 3 meses</span>
+              <h3>Prácticas en Grupo DOSCAR</h3>
+              <p>
+                Instalación de TPV en locales y reparación de equipos informáticos.
+              </p>
+            </article>
+
+            <article class="timeline-item">
               <span class="timeline-date">Educación</span>
-              <h3>Sistemas Microinformáticos (SMR)</h3>
-              <p>Ciclo Medio completado con éxito.</p>
-            </div>
+              <h3>Sistemas Microinformáticos y Redes</h3>
+              <p>Ciclo medio completado con éxito.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Voluntary Section -->
-      <section class="reveal">
+      <section id="projects" class="section reveal">
         <div class="container">
-          <div class="card" style="text-align: center">
-            <h2 style="margin-bottom: 2rem">Proyectos y Voluntariado</h2>
-            <div class="grid grid-2">
-              <div>
-                <i
-                  data-lucide="shield-check"
-                  style="
-                    width: 48px;
-                    height: 48px;
-                    color: var(--primary);
-                    margin-bottom: 1rem;
-                  "
-                ></i>
-                <h3>Seguridad Informática</h3>
-                <p>
-                  Voluntario en charlas de seguridad informática para
-                  concienciar a la comunidad sobre buenas prácticas de seguridad.
-                </p>
+          <div class="section-heading">
+            <p class="eyebrow">Proyectos y voluntariado</p>
+            <h2>Experiencias que suman sensibilidad técnica y trabajo en equipo</h2>
+          </div>
+
+          <div class="grid grid-3 project-grid">
+            <article class="card project-card">
+              <div class="project-icon">
+                <i data-lucide="shield-check"></i>
               </div>
-              <div>
-                <i
-                  data-lucide="gamepad-2"
-                  style="
-                    width: 48px;
-                    height: 48px;
-                    color: var(--primary);
-                    margin-bottom: 1rem;
-                  "
-                ></i>
-                <h3>PreguntaDaw</h3>
-                <p>
-                  Desarrollo en grupo de un videojuego para concienciar a los
-                  jóvenes sobre el cambio climático.
-                </p>
+              <h3>Seguridad informática</h3>
+              <p>
+                Voluntario en charlas de seguridad informática para concienciar
+                sobre buenas prácticas y prevención de riesgos.
+              </p>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-icon">
+                <i data-lucide="gamepad-2"></i>
               </div>
-            </div>
+              <h3>PreguntaDaw</h3>
+              <p>
+                Desarrollo en grupo de un videojuego para concienciar a los
+                jóvenes sobre el cambio climático.
+              </p>
+            </article>
+
+            <article class="card project-card">
+              <div class="project-icon">
+                <i data-lucide="school"></i>
+              </div>
+              <h3>DUALEX</h3>
+              <p>
+                Classroom para la gestión de las FP duales de cada año, pensado
+                para centralizar la organización, el seguimiento y la información
+                de forma más clara.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="reveal">
+      <section id="contact" class="section reveal">
         <div class="container">
-          <div
-            class="card"
-            style="max-width: 700px; margin: 0 auto; text-align: center"
-          >
-            <h2 class="section-title" style="margin-bottom: 1.5rem">
-              ¿Trabajamos juntos?
-            </h2>
-            <p style="margin-bottom: 2.5rem">
-              Estoy listo para aportar mis ganas y conocimientos a tu próximo
-              gran proyecto.
-            </p>
-            <div class="grid grid-2" style="margin-bottom: 2rem">
-              <a
-                href="mailto:franciscomartinezfernandez53@gmail.com"
-                style="text-decoration: none; color: inherit"
-              >
-                <div
-                  style="
-                    padding: 1rem;
-                    border: 1px solid var(--border);
-                    border-radius: 12px;
-                  "
-                >
-                  <i data-lucide="mail" style="color: var(--primary)"></i>
-                  <p style="margin-top: 0.5rem; font-size: 0.9rem">
-<!--                     franciscomartinezfernandez53@gmail.com 
- -->                  No disponible por el momento </p>
-                </div>
-              </a>
-              <a
-                href="tel:+34659963208"
-                style="text-decoration: none; color: inherit"
-              >
-                <div
-                  style="
-                    padding: 1rem;
-                    border: 1px solid var(--border);
-                    border-radius: 12px;
-                  "
-                >
-                  <i data-lucide="phone" style="color: var(--primary)"></i>
-                  <p style="margin-top: 0.5rem; font-size: 0.9rem">
-<!--                     +34 659 96 32 08
- -->                  No disponible por el momento </p>
-                </div>
-              </a>
+          <div class="contact-shell">
+            <div class="section-heading section-heading-left">
+              <p class="eyebrow">Contacto</p>
+              <h2>¿Hablamos de tu próximo proyecto?</h2>
+              <p>
+                Estoy listo para aportar ganas, aprendizaje y una base técnica
+                en tu próximo proyecto.
+              </p>
             </div>
-            <p style="color: var(--text-muted); font-size: 0.9rem">
-              📍 Badajoz, España
-            </p>
+
+            <div class="contact-grid">
+              <a class="contact-card" href="mailto:franciscomartinezfernandez53@gmail.com">
+                <i data-lucide="mail"></i>
+                <span class="contact-label">Email</span>
+                <strong>No disponible por el momento</strong>
+              </a>
+
+              <a class="contact-card" href="tel:+34659963208">
+                <i data-lucide="phone"></i>
+                <span class="contact-label">Teléfono</span>
+                <strong>No disponible por el momento</strong>
+              </a>
+
+              <div class="contact-card contact-card-static">
+                <i data-lucide="map-pin"></i>
+                <span class="contact-label">Ubicación</span>
+                <strong>Badajoz, España</strong>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container">
-        <p>
-          &copy; 2026 Francisco Javier Martínez Fernández.
-        </p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; 2026 Francisco Javier Martínez Fernández.</p>
+        <p>Diseñado con foco en claridad, ritmo visual y una experiencia más cuidada.</p>
       </div>
     </footer>
 
     <script src="main.js"></script>
     <script>
-      // Initialize Lucide icons
       lucide.createIcons();
     </script>
   </body>
