@@ -48,15 +48,16 @@ document.addEventListener("DOMContentLoaded", () => {
     focusValue: document.querySelector(".hero-panel .glass-card:nth-of-type(2) p"),
     aboutEyebrow: document.querySelector("#about .eyebrow"),
     aboutTitle: document.querySelector("#about .section-heading h2"),
-    aboutCopy: document.querySelector("#about .section-heading p"),
-    aboutCardTitle: document.querySelector("#about .card-accent .card-topline span"),
-    aboutCardCopy: document.querySelector("#about .card-accent p"),
-    aboutExtraTitle: document.querySelector("#about .grid-2 .card:nth-child(2) .card-topline span"),
-    aboutExtraCopy: document.querySelector("#about .grid-2 .card:nth-child(2) p"),
-    languagesHeading: document.querySelector("#about .grid.gap-1 .card:nth-child(1) .card-topline span"),
-    spanishTag: document.querySelector("#about .grid.gap-1 .card:nth-child(1) .tag"),
-    availabilityHeading: document.querySelector("#about .grid.gap-1 .card:nth-child(2) .card-topline span"),
-    availabilityCopy: document.querySelector("#about .grid.gap-1 .card:nth-child(2) p"),
+    aboutCopy: document.querySelector("#about .section-heading p:not(.eyebrow)"),
+    aboutCardTitle: document.querySelector("#about .about-cards-stack .card:nth-child(1) .card-topline span"),
+    aboutCardCopy: document.querySelector("#about .about-cards-stack .card:nth-child(1) p"),
+    aboutExtraTitle: document.querySelector("#about .about-cards-stack .card:nth-child(2) .card-topline span"),
+    aboutExtraCopy: document.querySelector("#about .about-cards-stack .card:nth-child(2) p"),
+    keyDataTitle: document.querySelector("#about .about-cards-stack .card:nth-child(3) .card-topline span"),
+    languagesHeading: document.querySelector("#about .about-key-data .key-data-item:nth-child(1) .key-data-label"),
+    spanishTag: document.querySelector("#about .about-key-data .key-data-item:nth-child(1) .tag"),
+    availabilityHeading: document.querySelector("#about .about-key-data .key-data-item:nth-child(2) .key-data-label"),
+    availabilityCopy: document.querySelector("#about .about-key-data .key-data-item:nth-child(2) .tag"),
     skillsEyebrow: document.querySelector("#skills .eyebrow"),
     skillsTitle: document.querySelector("#skills .section-heading h2"),
     languageCardTitle: document.querySelector("#skills .skill-card:nth-child(1) h3"),
@@ -90,9 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
     project2Copy: document.querySelector("#projects .project-card:nth-child(2) p"),
     project3Title: document.querySelector("#projects .project-card:nth-child(3) h3"),
     project3Copy: document.querySelector("#projects .project-card:nth-child(3) p"),
+    project4Title: document.querySelector("#projects .project-card:nth-child(4) h3"),
+    project4Copy: document.querySelector("#projects .project-card:nth-child(4) p"),
+    project4Action: document.querySelector("#projects .project-card:nth-child(4) .project-actions .btn-label"),
+    project5Title: document.querySelector("#projects .project-card:nth-child(5) h3"),
+    project5Copy: document.querySelector("#projects .project-card:nth-child(5) p"),
     contactEyebrow: document.querySelector("#contact .eyebrow"),
     contactTitle: document.querySelector("#contact .section-heading h2"),
-    contactCopy: document.querySelector("#contact .section-heading p"),
+    contactCopy: document.querySelector("#contact .section-heading p:not(.eyebrow)"),
     contactGitHubLink: document.querySelector("#contact .contact-social .social-link:nth-child(1) span"),
     contactLinkedInLink: document.querySelector("#contact .contact-social .social-link:nth-child(2) span"),
     contactFormNameLabel: document.querySelector('label[for="contact-name"]'),
@@ -103,12 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
     contactFormMessagePlaceholder: document.querySelector("#contact-message"),
     contactFormButton: document.querySelector("#contact-form .btn-label"),
     contactFormNote: document.querySelector("#contact-form .form-note"),
-    emailLabel: document.querySelector(".contact-grid .contact-card:nth-child(1) .contact-label"),
-    emailValue: document.querySelector(".contact-grid .contact-card:nth-child(1) strong"),
-    phoneLabel: document.querySelector(".contact-grid .contact-card:nth-child(2) .contact-label"),
-    phoneValue: document.querySelector(".contact-grid .contact-card:nth-child(2) strong"),
-    locationLabel2: document.querySelector(".contact-grid .contact-card-static .contact-label"),
-    locationValue2: document.querySelector(".contact-grid .contact-card-static strong"),
+    formLockTitle: document.querySelector(".form-lock-content .lock-title"),
+    formLockDesc: document.querySelector(".form-lock-content .lock-desc"),
+    emailLabel: document.querySelector(".contact-grid > :nth-child(1) .contact-label"),
+    emailValue: document.querySelector(".contact-grid > :nth-child(1) strong"),
+    phoneLabel: document.querySelector(".contact-grid > :nth-child(2) .contact-label"),
+    phoneValue: document.querySelector(".contact-grid > :nth-child(2) strong"),
+    locationLabel2: document.querySelector(".contact-grid > :nth-child(3) .contact-label"),
+    locationValue2: document.querySelector(".contact-grid > :nth-child(3) strong"),
     footerCopy1: document.querySelector(".site-footer .footer-inner p:nth-child(1)"),
     footerCopy2: document.querySelector(".site-footer .footer-inner p:nth-child(2)"),
   };
@@ -117,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     es: {
       title: "Francisco Javier Martínez Fernández | Portfolio",
       description:
-        "Portfolio de Francisco Javier Martínez Fernández, estudiante de DAW con enfoque en desarrollo web moderno, experiencia de usuario y soluciones digitales.",
+        "Portfolio de Francisco Javier Martínez Fernández, Técnico Superior en DAW (Desarrollo de Aplicaciones Web) con enfoque en desarrollo web moderno, experiencia de usuario y soluciones digitales.",
       skipLink: "Saltar al contenido",
       brandText: "Portfolio personal",
       menu: "Menú",
@@ -132,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
         eyebrow: "Disponible para nuevas oportunidades",
         title: 'Diseño y desarrollo <span class="gradient-text">con una base clara, útil y moderna</span>',
         lead:
-          "Soy Francisco Javier Martínez Fernández, estudiante de DAW centrado en crear interfaces limpias, accesibles y con una experiencia de uso cuidada. Mi tecnología fuerte es React, con la que me siento más cómodo construyendo interfaces modernas, y además me encanta trabajar en equipo.",
+          "Soy Francisco Javier Martínez Fernández, graduado en DAW centrado en crear interfaces limpias, accesibles y con una experiencia de uso cuidada. Mi tecnología fuerte es React, con la que me siento más cómodo construyendo interfaces modernas, y además me encanta trabajar en equipo.",
         ctaPrimary: "Hablemos",
         ctaSecondary: "Ver proyectos",
         stat1Value: "React",
@@ -141,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stat2Label: "Interés por interfaces claras y funcionales",
         stat3Value: "Team",
         stat3Label: "Perfil colaborativo y proactivo",
-        role: "Desarrollador web junior · React",
+        role: "Técnico Superior en DAW · Frontend",
         profileTitle: "Construyo experiencias digitales con criterio visual",
         profileCopy:
           "Me gusta trabajar la estructura, el detalle y la coherencia para que cada proyecto se sienta sólido desde el primer vistazo. Me encanta colaborar con otras personas para sacar mejores ideas y resultados.",
@@ -154,17 +162,18 @@ document.addEventListener("DOMContentLoaded", () => {
         eyebrow: "Sobre mí",
         title: "Una base técnica sólida con ganas de seguir creciendo",
         copy:
-          "Soy una persona proactiva, amable y orientada al trabajo en equipo. Actualmente curso el segundo ciclo de DAW en la Escuela Virgen de Guadalupe.",
+          "Soy una persona proactiva, amable y orientada al trabajo en equipo. Recientemente me he graduado en el Ciclo Superior de DAW en la Escuela Virgen de Guadalupe.",
         what: "Lo que busco",
         whatCopy:
           "Integrarme en un equipo dinámico donde pueda aportar, aprender y profundizar en frameworks y herramientas modernas para crear productos útiles.",
         extraTitle: "Más allá del código",
         extraCopy:
           "Me motiva aprender en entornos reales, colaborar con buena comunicación y aportar una actitud cercana, constante y resolutiva. Fuera del trabajo técnico, me gusta mantenerme al día, observar cómo funcionan los productos digitales y pensar en cómo mejorarlos.",
+        keyDataTitle: "Datos clave",
         languages: "Idiomas",
         spanish: "Español nativo",
         availability: "Disponibilidad",
-        availabilityCopy: "Carnet de conducir tipo B.",
+        availabilityCopy: "Carnet de conducir tipo B",
       },
       skills: {
         eyebrow: "Habilidades",
@@ -179,15 +188,15 @@ document.addEventListener("DOMContentLoaded", () => {
       experience: {
         eyebrow: "Trayectoria",
         title: "Formación y experiencia que me han dado base técnica real",
-        currentDate: "Actualidad",
-        currentTitle: "Ciclo Superior DAW",
+        currentDate: "2024 - 2026",
+        currentTitle: "Técnico Superior en DAW",
         currentCopy:
-          "Escuela Virgen de Guadalupe. Especialización en desarrollo de aplicaciones web y mejora continua.",
+          "Escuela Virgen de Guadalupe. Graduado en Desarrollo de Aplicaciones Web con especialización en diseño responsivo y lógica front-end.",
         fenles4Date: "2026 · 4 meses",
         fenles4Title: "Prácticas en FENLES",
         fenles4Copy:
           "Estuve trabajando con sus tecnologías y trasladando su web, adaptándola al nuevo entorno y apoyando la puesta al día del proyecto.",
-        fenles1Date: "DAW · 1 mes",
+        fenles1Date: "DAW · 1 month",
         fenles1Title: "Prácticas en FENLES",
         fenles1Copy:
           "Primeras prácticas en la empresa, con contacto directo con el entorno profesional y participación en tareas del proyecto web.",
@@ -211,16 +220,25 @@ document.addEventListener("DOMContentLoaded", () => {
         project3Title: "DUALEX",
         project3Copy:
           "Classroom para la gestión de las FP duales de cada año, pensado para centralizar la organización, el seguimiento y la información de forma más clara.",
+        project4Title: "easyLeagues",
+        project4Copy:
+          "Co-fundador y segundo socio. Plataforma moderna para la gestión y organización de ligas y torneos deportivos de forma automatizada.",
+        project4Action: "Visitar sitio",
+        project5Title: "laDoblem",
+        project5Copy:
+          "Creador y desarrollador de una comunidad y foro de discusión dedicado al anime y manga, optimizado para la interacción de usuarios y SEO.",
       },
       contact: {
         eyebrow: "Contacto",
         title: "¿Hablamos de tu próximo proyecto?",
         copy: "Estoy listo para aportar ganas, aprendizaje y una base técnica en tu próximo proyecto.",
         github: "GitHub",
-        linkedin: "LinkedIn pendiente",
+        linkedin: "LinkedIn",
         email: "Email",
+        emailValue: "No disponible",
         phone: "Teléfono",
-        unavailable: "No disponible por el momento",
+        phoneValue: "No disponible",
+        unavailable: "No disponible",
         location: "Ubicación",
         formName: "Nombre",
         formEmail: "Email",
@@ -229,7 +247,9 @@ document.addEventListener("DOMContentLoaded", () => {
         formEmailPlaceholder: "tu@email.com",
         formMessagePlaceholder: "Cuéntame tu idea...",
         formButton: "Enviar mensaje",
-        formNote: "Esta persona no está a la espera de correos aún porque está de prácticas.",
+        formNote: "Formulario temporalmente inactivo.",
+        lockTitle: "Formulario Inactivo",
+        lockDesc: "No disponible por el momento",
       },
       footer1: "© 2026 Francisco Javier Martínez Fernández.",
       footer2: "Diseñado con foco en claridad, ritmo visual y una experiencia más cuidada.",
@@ -237,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
     en: {
       title: "Francisco Javier Martínez Fernández | Portfolio",
       description:
-        "Portfolio of Francisco Javier Martínez Fernández, a DAW student focused on modern web development, user experience, and digital solutions.",
+        "Portfolio of Francisco Javier Martínez Fernández, Web Application Development (DAW) graduate focused on modern web development, user experience, and digital solutions.",
       skipLink: "Skip to content",
       brandText: "Personal portfolio",
       menu: "Menu",
@@ -252,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
         eyebrow: "Available for new opportunities",
         title: 'Design and development <span class="gradient-text">with a clear, useful, modern foundation</span>',
         lead:
-          "I'm Francisco Javier Martínez Fernández, a DAW student focused on creating clean, accessible interfaces with a careful user experience. My strongest technology is React, which I’m most comfortable using to build modern interfaces, and I love working in a team.",
+          "I'm Francisco Javier Martínez Fernández, a DAW graduate focused on creating clean, accessible interfaces with a careful user experience. My strongest technology is React, which I’m most comfortable using to build modern interfaces, and I love working in a team.",
         ctaPrimary: "Let's talk",
         ctaSecondary: "View projects",
         stat1Value: "React",
@@ -261,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
         stat2Label: "Interest in clear, functional interfaces",
         stat3Value: "Team",
         stat3Label: "Collaborative and proactive mindset",
-        role: "Junior web developer · React",
+        role: "Web Application Developer · Frontend",
         profileTitle: "I build digital experiences with visual discipline",
         profileCopy:
           "I like working on structure, detail, and consistency so every project feels solid at first glance. I enjoy collaborating with other people to get better ideas and better results.",
@@ -274,17 +294,18 @@ document.addEventListener("DOMContentLoaded", () => {
         eyebrow: "About me",
         title: "A solid technical base with a desire to keep growing",
         copy:
-          "I'm proactive, friendly, and team-oriented. I’m currently studying the second year of DAW at Escuela Virgen de Guadalupe.",
+          "I'm proactive, friendly, and team-oriented. I recently graduated from the DAW Higher Vocational Program at Escuela Virgen de Guadalupe.",
         what: "What I'm looking for",
         whatCopy:
           "To join a dynamic team where I can contribute, learn, and deepen my knowledge of modern frameworks and tools to build useful products.",
         extraTitle: "Beyond the code",
         extraCopy:
           "I enjoy learning in real environments, collaborating with good communication, and bringing a friendly, steady, and problem-solving attitude. Outside the technical side, I like staying up to date, observing how digital products work, and thinking about how to improve them.",
+        keyDataTitle: "Key Details",
         languages: "Languages",
-        spanish: "Spanish native",
+        spanish: "Spanish active",
         availability: "Availability",
-        availabilityCopy: "Driving licence B.",
+        availabilityCopy: "Driving licence B",
       },
       skills: {
         eyebrow: "Skills",
@@ -299,10 +320,10 @@ document.addEventListener("DOMContentLoaded", () => {
       experience: {
         eyebrow: "Experience",
         title: "Training and experience that gave me a real technical base",
-        currentDate: "Today",
-        currentTitle: "DAW Higher Vocational Program",
+        currentDate: "2024 - 2026",
+        currentTitle: "Técnico Superior en DAW",
         currentCopy:
-          "Escuela Virgen de Guadalupe. Specializing in web application development and continuous improvement.",
+          "Escuela Virgen de Guadalupe. Graduated in Web Application Development with specialization in responsive design and front-end logic.",
         fenles4Date: "2026 · 4 months",
         fenles4Title: "Internship at FENLES",
         fenles4Copy:
@@ -331,16 +352,25 @@ document.addEventListener("DOMContentLoaded", () => {
         project3Title: "DUALEX",
         project3Copy:
           "A classroom-style platform for managing dual VET programs each year, designed to centralize organization, tracking, and information more clearly.",
+        project4Title: "easyLeagues",
+        project4Copy:
+          "Co-founder and second partner. A modern platform for automated management and organization of sports leagues and tournaments.",
+        project4Action: "Visit site",
+        project5Title: "laDoblem",
+        project5Copy:
+          "Creator and developer of an active community and discussion forum dedicated to anime and manga, optimized for user engagement and SEO.",
       },
       contact: {
         eyebrow: "Contact",
         title: "Ready to talk about your next project?",
         copy: "I'm ready to bring energy, learning, and a technical base to your next project.",
         github: "GitHub",
-        linkedin: "LinkedIn pending",
+        linkedin: "LinkedIn",
         email: "Email",
+        emailValue: "Unavailable",
         phone: "Phone",
-        unavailable: "Currently unavailable",
+        phoneValue: "Unavailable",
+        unavailable: "Unavailable",
         location: "Location",
         formName: "Name",
         formEmail: "Email",
@@ -349,7 +379,9 @@ document.addEventListener("DOMContentLoaded", () => {
         formEmailPlaceholder: "your@email.com",
         formMessagePlaceholder: "Tell me about your idea...",
         formButton: "Send message",
-        formNote: "This person isn't expecting emails yet because they are currently in an internship.",
+        formNote: "Form temporarily inactive.",
+        lockTitle: "Form Inactive",
+        lockDesc: "Currently unavailable",
       },
       footer1: "© 2026 Francisco Javier Martínez Fernández.",
       footer2: "Designed with a focus on clarity, visual rhythm, and a more polished experience.",
@@ -419,6 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (ui.aboutCardCopy) ui.aboutCardCopy.textContent = t.about.whatCopy;
     if (ui.aboutExtraTitle) ui.aboutExtraTitle.textContent = t.about.extraTitle;
     if (ui.aboutExtraCopy) ui.aboutExtraCopy.textContent = t.about.extraCopy;
+    if (ui.keyDataTitle) ui.keyDataTitle.textContent = t.about.keyDataTitle;
     if (ui.languagesHeading) ui.languagesHeading.textContent = t.about.languages;
     if (ui.spanishTag) ui.spanishTag.textContent = t.about.spanish;
     if (ui.availabilityHeading) ui.availabilityHeading.textContent = t.about.availability;
@@ -459,6 +492,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (ui.project2Copy) ui.project2Copy.textContent = t.projects.project2Copy;
     if (ui.project3Title) ui.project3Title.textContent = t.projects.project3Title;
     if (ui.project3Copy) ui.project3Copy.textContent = t.projects.project3Copy;
+    if (ui.project4Title) ui.project4Title.textContent = t.projects.project4Title;
+    if (ui.project4Copy) ui.project4Copy.textContent = t.projects.project4Copy;
+    if (ui.project4Action) ui.project4Action.textContent = t.projects.project4Action;
+    if (ui.project5Title) ui.project5Title.textContent = t.projects.project5Title;
+    if (ui.project5Copy) ui.project5Copy.textContent = t.projects.project5Copy;
 
     if (ui.contactEyebrow) ui.contactEyebrow.textContent = t.contact.eyebrow;
     if (ui.contactTitle) ui.contactTitle.textContent = t.contact.title;
@@ -473,10 +511,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (ui.contactFormMessagePlaceholder) ui.contactFormMessagePlaceholder.placeholder = t.contact.formMessagePlaceholder;
     if (ui.contactFormButton) ui.contactFormButton.textContent = t.contact.formButton;
     if (ui.contactFormNote) ui.contactFormNote.textContent = t.contact.formNote;
+    if (ui.formLockTitle) ui.formLockTitle.textContent = t.contact.lockTitle;
+    if (ui.formLockDesc) ui.formLockDesc.textContent = t.contact.lockDesc;
     if (ui.emailLabel) ui.emailLabel.textContent = t.contact.email;
-    if (ui.emailValue) ui.emailValue.textContent = t.contact.unavailable;
+    if (ui.emailValue) ui.emailValue.textContent = t.contact.emailValue;
     if (ui.phoneLabel) ui.phoneLabel.textContent = t.contact.phone;
-    if (ui.phoneValue) ui.phoneValue.textContent = t.contact.unavailable;
+    if (ui.phoneValue) ui.phoneValue.textContent = t.contact.phoneValue;
     if (ui.locationLabel2) ui.locationLabel2.textContent = t.contact.location;
     if (ui.locationValue2) ui.locationValue2.textContent = "Badajoz, España";
 
@@ -607,6 +647,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // 3D Tilt and Cursor Glow Effects
+  const cards = document.querySelectorAll(".card, .profile-card, .contact-card");
+
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+
+      const width = rect.width;
+      const height = rect.height;
+      const rotateX = ((y - height / 2) / height) * -8; // subtle max 8 degrees rotation
+      const rotateY = ((x - width / 2) / width) * 8;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
 
   if (window.lucide) {
     lucide.createIcons();
