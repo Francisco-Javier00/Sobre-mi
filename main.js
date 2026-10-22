@@ -726,15 +726,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  const handleScroll = () => {
-    if (nav) {
-      nav.classList.toggle("is-scrolled", window.scrollY > 12);
-    }
-    setActiveLink();
-  };
-
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  handleScroll();
+  window.addEventListener("scroll", setActiveLink, { passive: true });
+  setActiveLink();
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {

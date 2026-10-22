@@ -112,10 +112,6 @@ svg {
   justify-content: space-between;
   min-height: 88px;
   gap: 28px;
-  transition: min-height 0.25s;
-}
-.nav.is-scrolled {
-  min-height: 74px;
 }
 .brand {
   display: flex;
