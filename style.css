@@ -380,32 +380,19 @@ h1 {
 }
 .profile-ring {
   position: relative;
-  margin: 25px 26px 23px;
-  height: 235px;
+  width: calc(100% - 52px);
+  max-width: 320px;
+  margin: 25px auto 23px;
+  aspect-ratio: 1;
   border-radius: 8px;
-  background: #293c2b;
+  background: var(--raised);
   overflow: hidden;
-}
-.profile-ring:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, #0c1e134d, transparent 60%);
-  pointer-events: none;
 }
 .profile-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  filter: saturate(0.65);
-  transition:
-    filter 0.4s,
-    transform 0.6s;
-}
-.profile-card:hover .profile-photo {
-  filter: saturate(1);
-  transform: scale(1.025);
+  object-fit: contain;
+  object-position: center;
 }
 .profile-role {
   color: var(--primary);
@@ -732,6 +719,15 @@ h1 {
   margin-bottom: 13px;
   font-size: 23px;
   letter-spacing: -0.8px;
+}
+.project-status {
+  align-self: flex-start;
+  margin: 0 25px 13px;
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-muted);
+  font: 400 10px/1.6 var(--font-mono);
 }
 .project-card p {
   font-size: 12px;
@@ -1096,9 +1092,6 @@ h1 {
     font-size: 59px;
     letter-spacing: -3px;
   }
-  .profile-ring {
-    height: 215px;
-  }
   .about-split-container {
     gap: 50px;
   }
@@ -1164,8 +1157,8 @@ h1 {
     font-size: 12px;
   }
   .profile-ring {
-    margin: 18px;
-    height: 200px;
+    width: calc(100% - 36px);
+    margin: 18px auto;
   }
   .profile-card h2 {
     font-size: 20px;
@@ -1314,8 +1307,8 @@ h1 {
     padding-inline: 22px;
   }
   .profile-ring {
-    height: 260px;
-    margin: 22px;
+    width: calc(100% - 44px);
+    margin: 22px auto;
   }
   .profile-role,
   .profile-card > p:not(.profile-role),

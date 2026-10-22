@@ -182,9 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
     project4Copy: document.querySelector(
       "#projects .project-card[data-project=leagues] p",
     ),
-    project4Action: document.querySelector(
-      "#projects .project-card[data-project=leagues] .project-actions .btn-label",
-    ),
     project5Title: document.querySelector(
       "#projects .project-card[data-project=forum] h3",
     ),
@@ -308,8 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Classroom para la gestión de las FP duales de cada año, pensado para centralizar la organización, el seguimiento y la información de forma más clara.",
         project4Title: "easyLeagues",
         project4Copy:
-          "Co-fundador y segundo socio. Plataforma moderna para la gestión y organización de ligas y torneos deportivos de forma automatizada.",
-        project4Action: "Visitar sitio",
+          "Proyecto de gestión de ligas y torneos deportivos en el que participé como cofundador y segundo socio. No llegó a terminarse y fue descartado.",
         project5Title: "laDoblem",
         project5Copy:
           "Creador y desarrollador de una comunidad y foro de discusión dedicado al anime y manga, optimizado para la interacción de usuarios y SEO.",
@@ -421,8 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "A classroom-style platform for managing dual VET programs each year, designed to centralize organization, tracking, and information more clearly.",
         project4Title: "easyLeagues",
         project4Copy:
-          "Co-founder and second partner. A modern platform for automated management and organization of sports leagues and tournaments.",
-        project4Action: "Visit site",
+          "A sports league and tournament management project in which I participated as co-founder and second partner. Development was never completed and the project was abandoned.",
         project5Title: "laDoblem",
         project5Copy:
           "Creator and developer of an active community and discussion forum dedicated to anime and manga, optimized for user engagement and SEO.",
@@ -458,6 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
       contactAction: "Conectemos en LinkedIn",
       dualexCategory: "Web / Educación",
       forumCategory: "Comunidad / PHP",
+      leaguesStatus: "No terminado · Descartado",
     },
     en: {
       intro: "Hi, I'm Francisco Javier.",
@@ -477,6 +473,7 @@ document.addEventListener("DOMContentLoaded", () => {
       contactAction: "Connect on LinkedIn",
       dualexCategory: "Web / Education",
       forumCategory: "Community / PHP",
+      leaguesStatus: "Unfinished · Abandoned",
     },
   };
 
@@ -618,8 +615,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (ui.project4Title)
       ui.project4Title.textContent = t.projects.project4Title;
     if (ui.project4Copy) ui.project4Copy.textContent = t.projects.project4Copy;
-    if (ui.project4Action)
-      ui.project4Action.textContent = t.projects.project4Action;
     if (ui.project5Title)
       ui.project5Title.textContent = t.projects.project5Title;
     if (ui.project5Copy) ui.project5Copy.textContent = t.projects.project5Copy;

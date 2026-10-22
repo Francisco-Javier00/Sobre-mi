@@ -18,7 +18,7 @@ HTML5, CSS y JavaScript, sin proceso de compilación. Iconos Lucide con versión
 
 ## Proyectos
 
-- **easyLeagues:** cofundador y segundo socio de una plataforma de gestión de ligas y torneos deportivos. [Visitar sitio](https://easyleagues.es).
+- **easyLeagues:** proyecto de gestión de ligas y torneos deportivos en el que participé como cofundador y segundo socio. No llegó a terminarse y fue descartado.
 - **DUALEX:** plataforma para organizar y hacer seguimiento de la formación profesional dual.
 - **laDoblem:** comunidad y foro de anime y manga.
 - **Seguridad informática:** voluntariado en charlas de concienciación.
