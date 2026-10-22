@@ -1,31 +1,37 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Francisco Javier Martínez Fernández | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio de Francisco Javier Martínez Fernández, Técnico Superior en DAW (Desarrollo de Aplicaciones Web) con enfoque en desarrollo web moderno, experiencia de usuario y soluciones digitales."
+      content="Francisco Javier Martínez Fernández. Desarrollador web especializado en React y estudiante de la especialización en Inteligencia Artificial en el IES Augustóbriga."
     />
     <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#101412" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("theme") === "light" ? "light" : "dark";
+      } catch {}
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script
+      src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="page-bg"></div>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-
     <a class="skip-link" href="#content">Saltar al contenido</a>
 
     <header class="site-header">
@@ -71,30 +77,31 @@
       </nav>
     </header>
 
-    <main id="content">
+    <main id="content" tabindex="-1">
       <section class="hero section" id="top">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">Disponible para nuevas oportunidades</p>
+            <p class="hero-intro" data-i18n="intro">
+              Hola, soy Francisco Javier.
+            </p>
             <h1>
-              Diseño y desarrollo
-              <span class="gradient-text">con una base clara, útil y moderna</span>
+              Código con intención.
+              <span class="gradient-text">Ideas con futuro.</span>
             </h1>
             <p class="hero-lead">
-              Soy Francisco Javier Martínez Fernández, graduado en DAW centrado
-              en crear interfaces limpias, accesibles y con una experiencia de uso
-              cuidada. Mi tecnología fuerte es React, con la que me siento más
-              cómodo construyendo interfaces modernas, y además me encanta
-              trabajar en equipo.
+              Soy desarrollador web, con React como punto de partida y las
+              personas en el centro. Actualmente curso la especialización en
+              Inteligencia Artificial en el IES Augustóbriga.
             </p>
 
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">
-                <i data-lucide="send"></i>
+                <i data-lucide="arrow-up-right"></i>
                 <span class="btn-label">Hablemos</span>
               </a>
               <a class="btn btn-secondary" href="#projects">
-                <i data-lucide="sparkles"></i>
+                <i data-lucide="arrow-down-right"></i>
                 <span class="btn-label">Ver proyectos</span>
               </a>
             </div>
@@ -102,35 +109,40 @@
             <div class="hero-stats">
               <article class="stat-card">
                 <span class="stat-value">React</span>
-                <span class="stat-label">Mi tecnología principal para front-end</span>
+                <span class="stat-label">Mi punto de partida</span>
               </article>
               <article class="stat-card">
-                <span class="stat-value">UX</span>
-                <span class="stat-label">Interés por interfaces claras y funcionales</span>
+                <span class="stat-value">IA</span>
+                <span class="stat-label">Especialización en curso</span>
               </article>
               <article class="stat-card">
                 <span class="stat-value">Team</span>
-                <span class="stat-label">Perfil colaborativo y proactivo</span>
+                <span class="stat-label">Mejor en equipo</span>
               </article>
             </div>
           </div>
 
           <aside class="hero-panel reveal">
             <div class="profile-card">
+              <div class="profile-topline">
+                <span data-i18n="profileLabel">DETRÁS DEL CÓDIGO</span
+                ><span>FJ / 01</span>
+              </div>
               <div class="profile-ring profile-ring-photo">
                 <img
                   class="profile-photo"
+                  width="512"
+                  height="512"
+                  fetchpriority="high"
                   src="https://github.com/Francisco-Javier00.png?size=512"
                   alt="Retrato de Francisco Javier Martínez Fernández"
                 />
               </div>
-              <p class="profile-role">Desarrollador web junior · React</p>
-              <h2>Construyo experiencias digitales con criterio visual</h2>
+              <p class="profile-role">DAW · React · Inteligencia Artificial</p>
+              <h2>Francisco Javier Martínez Fernández</h2>
               <p>
-                Me gusta trabajar la estructura, el detalle y la coherencia para
-                que cada proyecto se sienta sólido desde el primer vistazo. Me
-                encanta colaborar con otras personas para sacar mejores ideas y
-                resultados.
+                Desarrollador web, curioso por naturaleza. Me gusta transformar
+                ideas en productos que se disfruten usando.
               </p>
 
               <div class="social-links">
@@ -155,22 +167,27 @@
               </div>
             </div>
 
-            <div class="glass-card">
-              <div class="mini-heading">
-                <i data-lucide="map-pin"></i>
-                <span>Ubicación</span>
+            <div class="learning-note">
+              <i data-lucide="brain-circuit" aria-hidden="true"></i>
+              <div>
+                <small data-i18n="learningLabel">Ahora, un paso más allá</small>
+                <strong data-i18n="learningTitle"
+                  >Especialización en Inteligencia Artificial</strong
+                >
+                <p data-i18n="learningSchool">IES Augustóbriga · En curso</p>
               </div>
-              <p>Badajoz, España</p>
-            </div>
-
-            <div class="glass-card">
-              <div class="mini-heading">
-                <i data-lucide="badge-check"></i>
-                <span>Enfoque</span>
-              </div>
-              <p>Diseño limpio, código organizado y aprendizaje continuo.</p>
             </div>
           </aside>
+        </div>
+        <div class="container hero-bottom">
+          <span
+            ><i data-lucide="map-pin" aria-hidden="true"></i
+            ><span data-i18n="location">Badajoz, España</span></span
+          >
+          <a href="#about"
+            ><span data-i18n="discover">Un poco más sobre mí</span
+            ><i data-lucide="arrow-down" aria-hidden="true"></i
+          ></a>
         </div>
       </section>
 
@@ -179,11 +196,14 @@
           <div class="about-split-container">
             <div class="about-intro">
               <div class="section-heading section-heading-left">
-                <p class="eyebrow">Sobre mí</p>
-                <h2>Una base técnica sólida con ganas de seguir creciendo</h2>
+                <p class="eyebrow">01 / Sobre mí</p>
+                <h2>Curiosidad como motor. Código como lenguaje.</h2>
                 <p>
-                  Soy una persona proactiva, amable y orientada al trabajo en equipo.
-                  Recientemente me he graduado en el Ciclo Superior de DAW en la Escuela Virgen de Guadalupe.
+                  Soy Técnico Superior en Desarrollo de Aplicaciones Web por la
+                  Escuela Virgen de Guadalupe. Ahora continúo mi formación con
+                  la especialización en Inteligencia Artificial en el IES
+                  Augustóbriga. Me motiva aprender, colaborar y encontrar
+                  soluciones que tengan sentido.
                 </p>
               </div>
             </div>
@@ -239,8 +259,8 @@
       <section id="skills" class="section reveal">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Habilidades</p>
-            <h2>Stack técnico que me permite moverme entre front, lógica y datos</h2>
+            <p class="eyebrow">02 / Habilidades</p>
+            <h2>Las herramientas detrás de las ideas.</h2>
           </div>
 
           <div class="grid grid-3 skills-grid">
@@ -257,7 +277,9 @@
             </article>
 
             <article class="card skill-card">
-              <div class="skill-icon"><i data-lucide="layout-dashboard"></i></div>
+              <div class="skill-icon">
+                <i data-lucide="layout-dashboard"></i>
+              </div>
               <h3>Desarrollo web</h3>
               <p>Interés por interfaces limpias, responsivas y accesibles.</p>
               <div class="tags">
@@ -285,16 +307,31 @@
       <section id="experience" class="section reveal">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Trayectoria</p>
-            <h2>Formación y experiencia que me han dado base técnica real</h2>
+            <p class="eyebrow">03 / Trayectoria</p>
+            <h2>Cada etapa, una nueva perspectiva.</h2>
           </div>
 
           <div class="timeline">
+            <article class="timeline-item timeline-current">
+              <span class="timeline-date" data-i18n="aiDate"
+                >Actualidad · En curso</span
+              >
+              <h3 data-i18n="aiTitle">
+                Especialización en Inteligencia Artificial
+              </h3>
+              <p data-i18n="aiCopy">
+                IES Augustóbriga. Actualmente cursando esta especialización para
+                ampliar mi formación en inteligencia artificial y explorar
+                nuevas posibilidades en el desarrollo de soluciones digitales.
+              </p>
+            </article>
             <article class="timeline-item">
               <span class="timeline-date">2024 - 2026</span>
               <h3>Técnico Superior en DAW</h3>
               <p>
-                Escuela Virgen de Guadalupe. Graduado en Desarrollo de Aplicaciones Web con especialización en diseño responsivo y lógica front-end.
+                Escuela Virgen de Guadalupe. Graduado en Desarrollo de
+                Aplicaciones Web con especialización en diseño responsivo y
+                lógica front-end.
               </p>
             </article>
 
@@ -321,7 +358,8 @@
               <span class="timeline-date">SMR · 3 meses</span>
               <h3>Prácticas en Grupo DOSCAR</h3>
               <p>
-                Instalación de TPV en locales y reparación de equipos informáticos.
+                Instalación de TPV en locales y reparación de equipos
+                informáticos.
               </p>
             </article>
 
@@ -337,12 +375,129 @@
       <section id="projects" class="section reveal">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Proyectos y voluntariado</p>
-            <h2>Experiencias que suman sensibilidad técnica y trabajo en equipo</h2>
+            <p class="eyebrow">04 / Proyectos y voluntariado</p>
+            <h2>Ideas que ya tienen forma.</h2>
           </div>
 
           <div class="grid grid-3 project-grid">
-            <article class="card project-card">
+            <article class="card project-card" data-project="leagues">
+              <div class="project-preview preview-leagues" aria-hidden="true">
+                <div class="preview-window">
+                  <div class="window-chrome">
+                    <b></b><b></b><b></b><span>DESIGN STUDY / UI</span>
+                  </div>
+                  <div class="preview-brand">
+                    easyLeagues<span>PLAY. MANAGE. REPEAT.</span>
+                  </div>
+                  <div class="preview-rule"></div>
+                  <div class="preview-scores">
+                    <div><small>Leagues</small><strong>08</strong></div>
+                    <div><small>Teams</small><strong>24</strong></div>
+                    <div><small>Matches</small><strong>96</strong></div>
+                  </div>
+                  <div class="preview-bars">
+                    <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b
+                    ><b></b><b></b>
+                  </div>
+                </div>
+              </div>
+              <div class="project-type">
+                <span>SaaS / React</span
+                ><i data-lucide="code-2" aria-hidden="true"></i>
+              </div>
+              <h3>easyLeagues</h3>
+              <p>
+                Co-fundador y segundo socio. Plataforma moderna para la gestión
+                y organización de ligas y torneos deportivos de forma
+                automatizada.
+              </p>
+              <div class="project-badges">
+                <span class="project-badge">SaaS</span>
+                <span class="project-badge">React</span>
+                <span class="project-badge">SQL</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  href="https://easyleagues.es"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn btn-secondary btn-sm"
+                >
+                  <span class="btn-label">Visitar sitio</span>
+                  <i data-lucide="external-link"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="card project-card" data-project="dualex">
+              <div class="project-preview preview-dualex" aria-hidden="true">
+                <div class="preview-window">
+                  <div class="window-chrome">
+                    <b></b><b></b><b></b><span>DESIGN STUDY / UI</span>
+                  </div>
+                  <div class="preview-brand">
+                    DUALEX<span>LEARN. CONNECT. GROW.</span>
+                  </div>
+                  <div class="preview-rule"></div>
+                  <div class="preview-kanban">
+                    <div><span></span><b></b><b></b></div>
+                    <div><span></span><b></b><b></b><b></b></div>
+                    <div><span></span><b></b><b></b></div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-type">
+                <span data-i18n="dualexCategory">Web / Educación</span
+                ><i data-lucide="code-2" aria-hidden="true"></i>
+              </div>
+              <h3>DUALEX</h3>
+              <p>
+                Classroom para la gestión de las FP duales de cada año, pensado
+                para centralizar la organización, el seguimiento y la
+                información de forma más clara.
+              </p>
+              <div class="project-badges">
+                <span class="project-badge">PHP</span>
+                <span class="project-badge">MySQL</span>
+                <span class="project-badge">Educación</span>
+              </div>
+            </article>
+
+            <article class="card project-card" data-project="forum">
+              <div class="project-preview preview-forum" aria-hidden="true">
+                <div class="preview-window">
+                  <div class="window-chrome">
+                    <b></b><b></b><b></b><span>DESIGN STUDY / UI</span>
+                  </div>
+                  <div class="preview-brand">
+                    laDoblem<span>ANIME & MANGA</span>
+                  </div>
+                  <div class="preview-thread">
+                    <b></b><span></span><em></em>
+                  </div>
+                  <div class="preview-thread">
+                    <b></b><span></span><em></em>
+                  </div>
+                </div>
+              </div>
+              <div class="project-type">
+                <span data-i18n="forumCategory">Comunidad / PHP</span
+                ><i data-lucide="code-2" aria-hidden="true"></i>
+              </div>
+              <h3>laDoblem</h3>
+              <p>
+                Creador y desarrollador de una comunidad y foro de discusión
+                dedicado al anime y manga, optimizado para la interacción de
+                usuarios y SEO.
+              </p>
+              <div class="project-badges">
+                <span class="project-badge">PHP</span>
+                <span class="project-badge">MySQL</span>
+                <span class="project-badge">SEO</span>
+              </div>
+            </article>
+
+            <article class="card project-card" data-project="security">
               <div class="project-icon">
                 <i data-lucide="shield-check"></i>
               </div>
@@ -357,7 +512,7 @@
               </div>
             </article>
 
-            <article class="card project-card">
+            <article class="card project-card" data-project="preguntadaw">
               <div class="project-icon">
                 <i data-lucide="gamepad-2"></i>
               </div>
@@ -372,60 +527,10 @@
                 <span class="project-badge">Colaborativo</span>
               </div>
             </article>
-
-            <article class="card project-card">
-              <div class="project-icon">
-                <i data-lucide="school"></i>
-              </div>
-              <h3>DUALEX</h3>
-              <p>
-                Classroom para la gestión de las FP duales de cada año, pensado
-                para centralizar la organización, el seguimiento y la información
-                de forma más clara.
-              </p>
-              <div class="project-badges">
-                <span class="project-badge">PHP</span>
-                <span class="project-badge">MySQL</span>
-                <span class="project-badge">Educación</span>
-              </div>
-            </article>
-
-            <article class="card project-card">
-              <div class="project-icon">
-                <i data-lucide="trophy"></i>
-              </div>
-              <h3>easyLeagues</h3>
-              <p>
-                Co-fundador y segundo socio. Plataforma moderna para la gestión y organización de ligas y torneos deportivos de forma automatizada.
-              </p>
-              <div class="project-badges">
-                <span class="project-badge">SaaS</span>
-                <span class="project-badge">React</span>
-                <span class="project-badge">SQL</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://easyleagues.es" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm">
-                  <span class="btn-label">Visitar sitio</span>
-                  <i data-lucide="external-link"></i>
-                </a>
-              </div>
-            </article>
-
-            <article class="card project-card">
-              <div class="project-icon">
-                <i data-lucide="message-square"></i>
-              </div>
-              <h3>laDoblem</h3>
-              <p>
-                Creador y desarrollador de una comunidad y foro de discusión dedicado al anime y manga, optimizado para la interacción de usuarios y SEO.
-              </p>
-              <div class="project-badges">
-                <span class="project-badge">PHP</span>
-                <span class="project-badge">MySQL</span>
-                <span class="project-badge">SEO</span>
-              </div>
-            </article>
           </div>
+          <small class="project-preview-note" data-i18n="previewNote"
+            >Ilustraciones conceptuales de las interfaces.</small
+          >
         </div>
       </section>
 
@@ -433,11 +538,11 @@
         <div class="container">
           <div class="contact-shell">
             <div class="section-heading section-heading-left">
-              <p class="eyebrow">Contacto</p>
-              <h2>¿Hablamos de tu próximo proyecto?</h2>
+              <p class="eyebrow">05 / Contacto</p>
+              <h2>Lo próximo empieza con un hola.</h2>
               <p>
-                Estoy listo para aportar ganas, aprendizaje y una base técnica
-                en tu próximo proyecto.
+                ¿Buscas a alguien que se implique, aporte ideas y siga creciendo
+                con tu equipo? Me encantará conocerte.
               </p>
 
               <div class="contact-social">
@@ -462,54 +567,20 @@
               </div>
             </div>
 
-            <div class="contact-stack">
-              <div class="contact-grid">
-              <div class="contact-card contact-card-static">
-                <i data-lucide="mail"></i>
-                <span class="contact-label">Email</span>
-                <strong>No disponible</strong>
-              </div>
-
-              <div class="contact-card contact-card-static">
-                <i data-lucide="phone"></i>
-                <span class="contact-label">Teléfono</span>
-                <strong>No disponible</strong>
-              </div>
-
-              <div class="contact-card contact-card-static">
-                <i data-lucide="map-pin"></i>
-                <span class="contact-label">Ubicación</span>
-                <strong>Badajoz, España</strong>
-              </div>
-              </div>
-
-              <form class="contact-form form-locked" id="contact-form">
-                <div class="form-lock-overlay">
-                  <div class="form-lock-content">
-                    <i data-lucide="lock" class="lock-icon"></i>
-                    <p class="lock-title">Formulario Inactivo</p>
-                    <p class="lock-desc">No disponible por el momento</p>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <label for="contact-name">Nombre</label>
-                  <input id="contact-name" name="name" type="text" placeholder="Tu nombre" disabled required />
-                </div>
-                <div class="form-row">
-                  <label for="contact-email">Email</label>
-                  <input id="contact-email" name="email" type="email" placeholder="tu@email.com" disabled required />
-                </div>
-                <div class="form-row">
-                  <label for="contact-message">Mensaje</label>
-                  <textarea id="contact-message" name="message" rows="5" placeholder="Cuéntame tu idea..." disabled required></textarea>
-                </div>
-                <button class="btn btn-primary btn-submit" type="submit" disabled>
-                  <i data-lucide="send"></i>
-                  <span class="btn-label">Enviar mensaje</span>
-                </button>
-                <p class="form-note">Formulario temporalmente inactivo.</p>
-              </form>
+            <div class="contact-invite">
+              <i data-lucide="messages-square" aria-hidden="true"></i>
+              <p data-i18n="contactInvite">
+                Una idea, una oportunidad o simplemente un hola. El primer paso
+                es una conversación.
+              </p>
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/francisco-javier-martinez-fernandez-408545409/"
+                target="_blank"
+                rel="noreferrer"
+                ><span data-i18n="contactAction">Conectemos en LinkedIn</span
+                ><i data-lucide="arrow-up-right" aria-hidden="true"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -519,13 +590,10 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>&copy; 2026 Francisco Javier Martínez Fernández.</p>
-        <p>Diseñado con foco en claridad, ritmo visual y una experiencia más cuidada.</p>
+        <p>Hecho con intención. Siempre aprendiendo.</p>
       </div>
     </footer>
 
     <script src="main.js"></script>
-    <script>
-      lucide.createIcons();
-    </script>
   </body>
 </html>

@@ -1,67 +1,43 @@
-# Portfolio Personal - Francisco Javier Martínez Fernández
+# Francisco.dev — Portfolio personal
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-</p>
+Portfolio de Francisco Javier Martínez Fernández, Técnico Superior en Desarrollo de Aplicaciones Web y actualmente estudiante de la especialización en Inteligencia Artificial en el IES Augustóbriga.
 
-<p align="center">
-  <strong>Técnico Superior en DAW (Desarrollo de Aplicaciones Web)</strong> con un enfoque en interfaces de usuario modernas, interactivas, y una experiencia visual sumamente premium.
-</p>
+## Diseño y experiencia
 
----
+- Dirección visual con tipografía Manrope y DM Sans, superficies oscuras y acentos menta.
+- Tema claro alternativo y selector español/inglés, con preferencias guardadas en el navegador.
+- Presentación personal y tarjeta destacada de la especialización en IA, identificada como formación en curso.
+- Trayectoria con formación y experiencia profesional.
+- Proyectos con ilustraciones conceptuales de interfaces, creadas con HTML y CSS.
+- Contacto directo mediante LinkedIn y enlaces a GitHub.
+- Diseño adaptable, navegación por teclado, enlace para saltar al contenido y respeto a la preferencia de movimiento reducido.
 
-## 🌟 Características Destacadas
+## Tecnologías
 
-*   **Diseño de Panel Dividido (Split Layout):** Presentación organizada y limpia de la sección "Sobre Mí" con tarjetas unificadas para datos clave.
-*   **Efectos Tridimensionales (3D Tilt):** Las tarjetas del portfolio (`.card`, `.profile-card`, `.contact-card`) reaccionan dinámicamente al movimiento del cursor del ratón con inclinación 3D realista y suave.
-*   **Destello de Cursor (Cursor Glow):** Efecto radial dinámico que sigue el cursor del ratón dentro de las tarjetas, resaltando bordes y contenidos de forma moderna.
-*   **Idiomas e Internacionalización:** Sitio bilingüe (Español / Inglés) implementado de forma reactiva en el cliente con traducción dinámica de contenidos.
-*   **Tema Claro/Oscuro:** Integración de paletas optimizadas y de alto contraste según el gusto del usuario, con persistencia en `localStorage`.
-*   **Formulario Inactivo Estilizado:** Overlay translúcido de bloqueo con efecto *frosted glass* y candado Lucide indicando inactividad temporal del formulario.
+HTML5, CSS y JavaScript, sin proceso de compilación. Iconos Lucide con versión fijada. Las fuentes, los iconos y la imagen de perfil de GitHub requieren conexión a Internet; el contenido permanece accesible si esos recursos no cargan.
 
----
+## Proyectos
 
-## 💻 Stack Tecnológico
+- **easyLeagues:** cofundador y segundo socio de una plataforma de gestión de ligas y torneos deportivos. [Visitar sitio](https://easyleagues.es).
+- **DUALEX:** plataforma para organizar y hacer seguimiento de la formación profesional dual.
+- **laDoblem:** comunidad y foro de anime y manga.
+- **Seguridad informática:** voluntariado en charlas de concienciación.
+- **PreguntaDaw:** videojuego educativo sobre el cambio climático, desarrollado en grupo.
 
-*   **Front-end:** HTML5 semántico, CSS3 Vanilla (Custom Variables, CSS Grid y Flexbox) y JavaScript ES6+.
-*   **Componentes e Iconografía:** Lucide Icons.
-*   **Tipografía:** Plus Jakarta Sans (encabezados) e Inter (cuerpo de texto).
+Las ilustraciones de las tarjetas son composiciones conceptuales; no representan capturas reales ni métricas de los proyectos.
 
----
+## Desarrollo local
 
-## 📂 Proyectos Destacados
+Desde la carpeta del proyecto:
 
-1.  **easyLeagues ([easyleagues.es](https://easyleagues.es)):** Co-fundador y segundo socio. Plataforma moderna para la automatización, gestión y organización de ligas y torneos deportivos. Incluye un botón de redirección directa en el portfolio.
-2.  **laDoblem:** Foro de discusión y comunidad de anime y manga desarrollado y optimizado para la interacción de usuarios, velocidad de carga y SEO.
-3.  **DUALEX:** Aplicación tipo Classroom orientada a la organización, seguimiento centralizado y gestión de la formación profesional dual por año.
-4.  **PreguntaDaw:** Videojuego educativo desarrollado en grupo para concienciar sobre el cambio climático a la juventud.
-5.  **Voluntariado en Seguridad Informática:** Impartición de charlas comunitarias sobre buenas prácticas de seguridad informática y prevención de riesgos.
-
----
-
-## ⚙️ Estructura del Proyecto
-
-```text
-.
-├── index.html     # Estructura semántica, cards, e interfaces del portfolio
-├── main.js        # Lógica de traducción, tema, inclinación 3D, y animaciones de scroll
-├── style.css      # Hoja de estilos con variables de diseño, rejillas CSS Grid, y efectos visuales
-└── README.md      # Documentación del proyecto
+```sh
+python -m http.server 8000
 ```
 
----
+Abre [localhost:8000](http://localhost:8000).
 
-## 🚀 Despliegue Local
+## Archivos
 
-1.  Clona el repositorio:
-    ```bash
-    git clone https://github.com/Francisco-Javier00/Sobre-mi.git
-    ```
-2.  Inicia cualquier servidor web local estático en el directorio raíz (por ejemplo, usando la extensión Live Server de VS Code o mediante terminal):
-    ```bash
-    python -m http.server 8000
-    ```
-3.  Abre `http://localhost:8000` en tu navegador.
+- `index.html`: estructura semántica y contenido inicial en español.
+- `style.css`: diseño, temas y adaptación a distintos tamaños de pantalla.
+- `main.js`: traducciones, preferencias, navegación y animaciones de aparición.
